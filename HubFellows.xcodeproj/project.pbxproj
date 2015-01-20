@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4E4D089F1A6DA4BF0070BE59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D089E1A6DA4BF0070BE59 /* AppDelegate.swift */; };
-		4E4D08A11A6DA4BF0070BE59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D08A01A6DA4BF0070BE59 /* ViewController.swift */; };
+		4E4D08A11A6DA4BF0070BE59 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D08A01A6DA4BF0070BE59 /* MainMenuViewController.swift */; };
 		4E4D08A41A6DA4BF0070BE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D08A21A6DA4BF0070BE59 /* Main.storyboard */; };
 		4E4D08A61A6DA4BF0070BE59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D08A51A6DA4BF0070BE59 /* Images.xcassets */; };
 		4E4D08A91A6DA4BF0070BE59 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D08A71A6DA4BF0070BE59 /* LaunchScreen.xib */; };
 		4E4D08B51A6DA4BF0070BE59 /* HubFellowsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D08B41A6DA4BF0070BE59 /* HubFellowsTests.swift */; };
+		4E4D08C21A6DA9410070BE59 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D08C11A6DA9410070BE59 /* RepositoriesViewController.swift */; };
+		4E4D08C41A6DADF00070BE59 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D08C31A6DADF00070BE59 /* NetworkController.swift */; };
+		4E4D08C61A6DAFDE0070BE59 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D08C51A6DAFDE0070BE59 /* RepositoryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +32,16 @@
 		4E4D08991A6DA4BF0070BE59 /* HubFellows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HubFellows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4D089D1A6DA4BF0070BE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E4D089E1A6DA4BF0070BE59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E4D08A01A6DA4BF0070BE59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E4D08A01A6DA4BF0070BE59 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		4E4D08A31A6DA4BF0070BE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E4D08A51A6DA4BF0070BE59 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4E4D08A81A6DA4BF0070BE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4E4D08AE1A6DA4BF0070BE59 /* HubFellowsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HubFellowsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4D08B31A6DA4BF0070BE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E4D08B41A6DA4BF0070BE59 /* HubFellowsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubFellowsTests.swift; sourceTree = "<group>"; };
+		4E4D08C11A6DA9410070BE59 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
+		4E4D08C31A6DADF00070BE59 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		4E4D08C51A6DAFDE0070BE59 /* RepositoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +83,10 @@
 		4E4D089B1A6DA4BF0070BE59 /* HubFellows */ = {
 			isa = PBXGroup;
 			children = (
-				4E4D089E1A6DA4BF0070BE59 /* AppDelegate.swift */,
-				4E4D08A01A6DA4BF0070BE59 /* ViewController.swift */,
-				4E4D08A21A6DA4BF0070BE59 /* Main.storyboard */,
+				4E4D08C01A6DA6B90070BE59 /* Controllers */,
+				4E4D08BF1A6DA6B30070BE59 /* Views */,
+				4E4D08BE1A6DA6A50070BE59 /* Models */,
 				4E4D08A51A6DA4BF0070BE59 /* Images.xcassets */,
-				4E4D08A71A6DA4BF0070BE59 /* LaunchScreen.xib */,
 				4E4D089C1A6DA4BF0070BE59 /* Supporting Files */,
 			);
 			path = HubFellows;
@@ -110,6 +115,34 @@
 				4E4D08B31A6DA4BF0070BE59 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E4D08BE1A6DA6A50070BE59 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4E4D08C51A6DAFDE0070BE59 /* RepositoryModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4E4D08BF1A6DA6B30070BE59 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4E4D08A71A6DA4BF0070BE59 /* LaunchScreen.xib */,
+				4E4D08A21A6DA4BF0070BE59 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4E4D08C01A6DA6B90070BE59 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E4D08C31A6DADF00070BE59 /* NetworkController.swift */,
+				4E4D08A01A6DA4BF0070BE59 /* MainMenuViewController.swift */,
+				4E4D08C11A6DA9410070BE59 /* RepositoriesViewController.swift */,
+				4E4D089E1A6DA4BF0070BE59 /* AppDelegate.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E4D08A11A6DA4BF0070BE59 /* ViewController.swift in Sources */,
+				4E4D08C41A6DADF00070BE59 /* NetworkController.swift in Sources */,
+				4E4D08C61A6DAFDE0070BE59 /* RepositoryModel.swift in Sources */,
+				4E4D08A11A6DA4BF0070BE59 /* MainMenuViewController.swift in Sources */,
+				4E4D08C21A6DA9410070BE59 /* RepositoriesViewController.swift in Sources */,
 				4E4D089F1A6DA4BF0070BE59 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
