@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E3241591A6F1A450023CA75 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3241581A6F1A450023CA75 /* UserCell.xib */; };
 		4E32415B1A6F1AA70023CA75 /* UserCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32415A1A6F1AA70023CA75 /* UserCellModel.swift */; };
-		4E32415D1A6F1B920023CA75 /* UserModelSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32415C1A6F1B920023CA75 /* UserModelSwift.swift */; };
+		4E32415D1A6F1B920023CA75 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32415C1A6F1B920023CA75 /* UserModel.swift */; };
 		4E4D089F1A6DA4BF0070BE59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D089E1A6DA4BF0070BE59 /* AppDelegate.swift */; };
 		4E4D08A11A6DA4BF0070BE59 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D08A01A6DA4BF0070BE59 /* MainMenuViewController.swift */; };
 		4E4D08A41A6DA4BF0070BE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D08A21A6DA4BF0070BE59 /* Main.storyboard */; };
@@ -22,6 +22,8 @@
 		4E5607AD1A6EDFDB0043A4B3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5607AC1A6EDFDB0043A4B3 /* Default-568h@2x.png */; };
 		4E5607AF1A6F0C8C0043A4B3 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5607AE1A6F0C8C0043A4B3 /* WebViewController.swift */; };
 		4E5607B11A6F15E10043A4B3 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5607B01A6F15E10043A4B3 /* UsersViewController.swift */; };
+		4E602D8A1A7059B300CFEBAF /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E602D891A7059B300CFEBAF /* UserDetailViewController.swift */; };
+		4EC5F5771A7063610037EDB8 /* ToUserDetailAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5F5761A7063610037EDB8 /* ToUserDetailAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* Begin PBXFileReference section */
 		4E3241581A6F1A450023CA75 /* UserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		4E32415A1A6F1AA70023CA75 /* UserCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCellModel.swift; sourceTree = "<group>"; };
-		4E32415C1A6F1B920023CA75 /* UserModelSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModelSwift.swift; sourceTree = "<group>"; };
+		4E32415C1A6F1B920023CA75 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		4E4D08991A6DA4BF0070BE59 /* HubFellows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HubFellows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4D089D1A6DA4BF0070BE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E4D089E1A6DA4BF0070BE59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,8 @@
 		4E5607AC1A6EDFDB0043A4B3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4E5607AE1A6F0C8C0043A4B3 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		4E5607B01A6F15E10043A4B3 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		4E602D891A7059B300CFEBAF /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		4EC5F5761A7063610037EDB8 /* ToUserDetailAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToUserDetailAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				4E4D08C51A6DAFDE0070BE59 /* RepositoryModel.swift */,
-				4E32415C1A6F1B920023CA75 /* UserModelSwift.swift */,
+				4E32415C1A6F1B920023CA75 /* UserModel.swift */,
 				4E32415A1A6F1AA70023CA75 /* UserCellModel.swift */,
 			);
 			name = Models;
@@ -153,14 +157,24 @@
 		4E4D08C01A6DA6B90070BE59 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4EC5F5751A7063480037EDB8 /* New Group */,
 				4E4D08C31A6DADF00070BE59 /* NetworkController.swift */,
 				4E4D08A01A6DA4BF0070BE59 /* MainMenuViewController.swift */,
 				4E4D08C11A6DA9410070BE59 /* RepositoriesViewController.swift */,
 				4E5607B01A6F15E10043A4B3 /* UsersViewController.swift */,
 				4E5607AE1A6F0C8C0043A4B3 /* WebViewController.swift */,
+				4E602D891A7059B300CFEBAF /* UserDetailViewController.swift */,
 				4E4D089E1A6DA4BF0070BE59 /* AppDelegate.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4EC5F5751A7063480037EDB8 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				4EC5F5761A7063610037EDB8 /* ToUserDetailAnimationController.swift */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,9 +285,11 @@
 				4E5607B11A6F15E10043A4B3 /* UsersViewController.swift in Sources */,
 				4E4D08A11A6DA4BF0070BE59 /* MainMenuViewController.swift in Sources */,
 				4E4D08C21A6DA9410070BE59 /* RepositoriesViewController.swift in Sources */,
-				4E32415D1A6F1B920023CA75 /* UserModelSwift.swift in Sources */,
+				4E602D8A1A7059B300CFEBAF /* UserDetailViewController.swift in Sources */,
+				4E32415D1A6F1B920023CA75 /* UserModel.swift in Sources */,
 				4E32415B1A6F1AA70023CA75 /* UserCellModel.swift in Sources */,
 				4E4D089F1A6DA4BF0070BE59 /* AppDelegate.swift in Sources */,
+				4EC5F5771A7063610037EDB8 /* ToUserDetailAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

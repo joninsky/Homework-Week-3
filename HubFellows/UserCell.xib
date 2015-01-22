@@ -7,20 +7,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserCellModel" customModule="HubFellows" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="userCell" id="cGS-XC-xR2" customClass="UserCellModel" customModule="HubFellows" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="291" height="436"/>
+            <rect key="frame" x="0.0" y="0.0" width="115" height="156"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="291" height="436"/>
+                <rect key="frame" x="0.0" y="0.0" width="115" height="156"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eiZ-W5-rkv">
-                        <rect key="frame" x="8" y="8" width="275" height="304"/>
+                        <rect key="frame" x="8" y="8" width="99" height="98"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="304" id="mSZ-oA-ePm"/>
+                            <constraint firstAttribute="height" constant="98" id="kTp-8P-qPU"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8b-l4-l7H">
-                        <rect key="frame" x="8" y="320" width="275" height="108"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8b-l4-l7H">
+                        <rect key="frame" x="8" y="114" width="99" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -29,20 +29,20 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstItem="v8b-l4-l7H" firstAttribute="leading" secondItem="cGS-XC-xR2" secondAttribute="leading" constant="8" id="26q-5H-g3H"/>
-                <constraint firstAttribute="trailing" secondItem="eiZ-W5-rkv" secondAttribute="trailing" constant="8" id="Hb0-eT-et9"/>
-                <constraint firstAttribute="trailing" secondItem="v8b-l4-l7H" secondAttribute="trailing" constant="8" id="Iue-9J-tdv"/>
-                <constraint firstAttribute="bottom" secondItem="v8b-l4-l7H" secondAttribute="bottom" constant="8" id="JOv-Rm-6ca"/>
-                <constraint firstItem="v8b-l4-l7H" firstAttribute="top" secondItem="eiZ-W5-rkv" secondAttribute="bottom" constant="8" id="JWN-QF-NwB"/>
-                <constraint firstItem="eiZ-W5-rkv" firstAttribute="top" secondItem="cGS-XC-xR2" secondAttribute="top" constant="8" id="Wec-yw-Bq4"/>
-                <constraint firstItem="eiZ-W5-rkv" firstAttribute="leading" secondItem="cGS-XC-xR2" secondAttribute="leading" constant="8" id="pkb-Ua-kAr"/>
+                <constraint firstItem="v8b-l4-l7H" firstAttribute="top" secondItem="eiZ-W5-rkv" secondAttribute="bottom" constant="8" id="3dR-Fb-h2G"/>
+                <constraint firstItem="v8b-l4-l7H" firstAttribute="leading" secondItem="cGS-XC-xR2" secondAttribute="leading" constant="8" id="4rJ-Ya-y8a"/>
+                <constraint firstAttribute="bottom" secondItem="v8b-l4-l7H" secondAttribute="bottom" constant="8" id="Ekj-6K-NWk"/>
+                <constraint firstAttribute="trailing" secondItem="eiZ-W5-rkv" secondAttribute="trailing" constant="8" id="UrP-UL-uJb"/>
+                <constraint firstItem="eiZ-W5-rkv" firstAttribute="top" secondItem="cGS-XC-xR2" secondAttribute="top" constant="8" id="V6V-vR-Dut"/>
+                <constraint firstAttribute="trailing" secondItem="v8b-l4-l7H" secondAttribute="trailing" constant="8" id="aav-un-EJO"/>
+                <constraint firstItem="eiZ-W5-rkv" firstAttribute="leading" secondItem="cGS-XC-xR2" secondAttribute="leading" constant="8" id="cZw-f2-pM3"/>
             </constraints>
-            <size key="customSize" width="291" height="436"/>
+            <size key="customSize" width="53" height="40"/>
             <connections>
                 <outlet property="myUserImageView" destination="eiZ-W5-rkv" id="GVr-bb-Aqg"/>
                 <outlet property="myUserLabel" destination="v8b-l4-l7H" id="VcJ-TP-SkJ"/>
             </connections>
-            <point key="canvasLocation" x="263.5" y="352"/>
+            <point key="canvasLocation" x="175.5" y="222"/>
         </collectionViewCell>
     </objects>
 </document>

@@ -16,6 +16,10 @@ class RepositoriesViewController: UIViewController, UITableViewDataSource, UITab
   
   @IBOutlet weak var mySearchBar: UISearchBar!
   
+  @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
+  
+  
+  
   var NC = NetworkController()
   var arrayOfRepositories: [RepositoryModel]?
   
@@ -55,12 +59,14 @@ class RepositoriesViewController: UIViewController, UITableViewDataSource, UITab
   //MARK: Search Bar delegate method
   func searchBarSearchButtonClicked(searchBar: UISearchBar) {
     
+    //self.myActivityIndicator.startAnimating()
     let text = searchBar.text.stringByReplacingOccurrencesOfString(" ", withString: "+", options: nil, range: nil)
     println(text)
     NetworkController.sharedNetworkController.getRepositoriesForSearchTerm(text, completion: { (arrayOfRepos, error) -> (Void) in
       self.arrayOfRepositories = arrayOfRepos
       self.myTableView.dataSource = self
       self.myTableView.delegate = self
+      //self.myActivityIndicator.stopAnimating()
       self.myTableView.reloadData()
     })
     

@@ -25,6 +25,7 @@ class NetworkController{
   var URLSession: NSURLSession
   var accessTokenUserHTTPKey = "accessToken"
   var accessToken: String?
+  let imageQueue = NSOperationQueue()
   
   
   init(){
@@ -54,6 +55,7 @@ class NetworkController{
     postRequest.setValue("\(lengthForHTTPBody)", forHTTPHeaderField: "Content-Length")
     postRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
     postRequest.HTTPBody = dataForHTTPBody
+    println(postRequest.HTTPBody)
     println(postRequest)
     
     let session = self.URLSession.dataTaskWithRequest(postRequest, completionHandler: { (returnedData, returnedResponse, returnedError) -> Void in
@@ -107,6 +109,54 @@ class NetworkController{
     })
     session.resume()
   }
+  
+  func getUserForSearchTerm(searchTerm: String, completion: ([UserModel],NSError?) ->Void){
+    let URL = NSURL(string: "https://api.github.com/search/users?q=\(searchTerm)")
+    let request = NSMutableURLRequest(URL: URL!)
+    request.setValue("token \(self.accessToken!)", forHTTPHeaderField: "Authorization")
+    
+    let session = self.URLSession.dataTaskWithRequest(request, completionHandler: { (returnedData, responseCode, returnedError) -> Void in
+      if returnedError == nil {
+        if let httpResponse = responseCode as? NSHTTPURLResponse{
+          var arrayOfUserObjects = [UserModel]()
+          switch httpResponse.statusCode{
+          case 200...299:
+            if let jsonDictionary = NSJSONSerialization.JSONObjectWithData(returnedData, options: nil, error: nil) as? [String:AnyObject]{
+              
+              let arrayOfUsers = jsonDictionary["items"] as [[String:AnyObject]]
+              for U in arrayOfUsers{
+                let user = UserModel(jsonString: U)
+                arrayOfUserObjects.append(user)
+              }
+              NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                completion(arrayOfUserObjects, returnedError)
+              })
+            }
+          default:
+            println(httpResponse.statusCode)
+          }
+        }
+      }
+    })
+    session.resume()
+  }
+  
+  
+  func downloadUserImage(user: UserModel, completion: (UIImage) -> Void) {
+    
+    imageQueue.addOperationWithBlock { () -> Void in
+      
+      let imageData = NSData(contentsOfURL: user.imageURL!)
+      let image = UIImage(data: imageData!)//as UIImage
+      NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
+        
+        completion(image!)
+        
+      }
+    }
+  }
+  
+  
   
 //End Class
 }
