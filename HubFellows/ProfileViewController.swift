@@ -19,7 +19,10 @@ class ProfileViewController: UIViewController {
   
   var theUser: UserModel?
   
+  var newRepoText: String?
+  
   var alertController = UIAlertController(title: "AddRepo", message: "Would you like to create a new repository?", preferredStyle: UIAlertControllerStyle.Alert)
+  var alertControllerWithName = UIAlertController(title: "Choose a Name", message: "Please choose a name for your new repo", preferredStyle: UIAlertControllerStyle.Alert)
   
   
   override func viewDidLoad() {
@@ -32,31 +35,42 @@ class ProfileViewController: UIViewController {
       self.refreshControls()
     }
     
-    let alertActionOK = UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default) { (action) -> Void in
-      self.alertController.addTextFieldWithConfigurationHandler({ (textField) -> Void in
-        
-        
-        
-        
+    let alertActionYes = UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default) { (action) -> Void in
+      
+      self.alertControllerWithName.addTextFieldWithConfigurationHandler({ (textField) -> Void in
         
       })
-      self.alertController.message = "What do you want to call the new Repo?"
-      self.presentViewController(self.alertController, animated: true, completion: nil)
-      
-      
+      self.presentViewController(self.alertControllerWithName, animated: true, completion: nil)
     }
     
     let alertActionCancell = UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel) { (action) -> Void in
       
       
+    }
+    let alertActionOK = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (action) -> Void in
       
+      let textField = self.alertControllerWithName.textFields?.first as UITextField
+      self.newRepoText = "\(textField.text)"
+      println(self.newRepoText!)
+      NetworkController.sharedNetworkController.postNewRepo(self.newRepoText!, completion: { (error) -> Void in
+        
+        
+        
+        
+      })
       
     }
-    self.alertController.addAction(alertActionOK)
+   
+    
+    
+    self.alertController.addAction(alertActionYes)
     self.alertController.addAction(alertActionCancell)
+    self.alertControllerWithName.addAction(alertActionOK)
     //self.alertController.actions[0].hidden = true
     
   }
+  
+  
   
   func refreshControls() {
     NetworkController.sharedNetworkController.downloadUserImage(theUser!, completion: { (theImage) -> Void in

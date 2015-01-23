@@ -169,7 +169,36 @@ class NetworkController{
   }
   
   
-  //func postNewRepo(jsonToParse:
+  func postNewRepo(newRepoName: String, completion: (NSError?)->Void){
+    
+    let dictionary = ["name": newRepoName]
+    
+    let jsonDictionary = NSDictionary(dictionary: dictionary)
+    
+    let jsonAsDate = NSJSONSerialization.dataWithJSONObject(jsonDictionary, options: nil, error: nil)
+
+    let URL = NSURL(string: "https://api.github.com/user/repos")
+    let request = NSMutableURLRequest(URL: URL!)
+    request.setValue("token \(self.accessToken!)", forHTTPHeaderField: "Authorization")
+    request.HTTPBody = jsonAsDate
+    request.HTTPMethod = "POST"
+    
+    let session = self.URLSession.dataTaskWithRequest(request, completionHandler: { (returnedData, responseCode, returnedError) -> Void in
+      if returnedError == nil {
+        if let httpResponse = responseCode as? NSHTTPURLResponse{
+          switch httpResponse.statusCode{
+          case 200...299:
+              NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                completion(returnedError)
+              })
+          default:
+            println(httpResponse.statusCode)
+          }
+        }
+      }
+    })
+    session.resume()
+  }
   
   
   func downloadUserImage(user: UserModel, completion: (UIImage) -> Void) {
