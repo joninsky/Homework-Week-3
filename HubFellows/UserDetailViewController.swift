@@ -21,8 +21,8 @@ class UserDetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.myImageView.image = userModel!.avatarImage
-    self.lblScore.text = "\(userModel!.score)"
-    self.lblReposURL.text = userModel!.repoURL.absoluteString
+    self.lblScore.text = "\(userModel!.score!)"
+    self.lblReposURL.text = userModel!.repoURL!.absoluteString
     
     
     

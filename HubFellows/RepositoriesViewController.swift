@@ -73,5 +73,9 @@ class RepositoriesViewController: UIViewController, UITableViewDataSource, UITab
     searchBar.resignFirstResponder()
   }
   
+  func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+    return text.validateSearchString()
+  }
+  
   
 }

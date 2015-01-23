@@ -84,6 +84,7 @@ class UsersViewController: UIViewController, UICollectionViewDataSource, UIColle
   }
   
   
+  //MARK: Search Bar button non required delegate methods
   func searchBarSearchButtonClicked(searchBar: UISearchBar) {
     let text = searchBar.text.stringByReplacingOccurrencesOfString(" ", withString: "+", options: nil, range: nil)
     
@@ -101,13 +102,15 @@ class UsersViewController: UIViewController, UICollectionViewDataSource, UIColle
       self.actionIndicator?.stopAnimating()
     })
     mySearchBar.resignFirstResponder()
-    
-    
+  }
+  
+  func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+    return text.validateSearchString()
   }
   
   
   
-  
+  //MARK: Navigation controller method that checks the to and from VC to see if we need to do the animaiton that we want.
   func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
     if fromVC is UsersViewController && toVC is UserDetailViewController{
       return ToUserDetailAnimationController()

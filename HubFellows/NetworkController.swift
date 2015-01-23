@@ -125,7 +125,7 @@ class NetworkController{
               
               let arrayOfUsers = jsonDictionary["items"] as [[String:AnyObject]]
               for U in arrayOfUsers{
-                let user = UserModel(jsonString: U)
+                let user = UserModel(jsonStringWhenMultipleUsers: U)
                 arrayOfUserObjects.append(user)
               }
               NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
@@ -140,6 +140,36 @@ class NetworkController{
     })
     session.resume()
   }
+  
+  func getSignedInUser(completion: (UserModel, NSError?) -> Void){
+    let URL = NSURL(string: "https://api.github.com/user")
+    let request = NSMutableURLRequest(URL: URL!)
+    request.setValue("token \(self.accessToken!)", forHTTPHeaderField: "Authorization")
+  
+    
+    let session = self.URLSession.dataTaskWithRequest(request, completionHandler: { (returnedData, responseCode, returnedError) -> Void in
+      if returnedError == nil {
+        if let httpResponse = responseCode as? NSHTTPURLResponse{
+          switch httpResponse.statusCode{
+          case 200...299:
+            if let jsonDictionary = NSJSONSerialization.JSONObjectWithData(returnedData, options: nil, error: nil) as? [String:AnyObject]{
+              println(jsonDictionary)
+                let user = UserModel(jsonStringWhenOneUser: jsonDictionary)
+              NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                completion(user, returnedError)
+              })
+            }
+          default:
+            println(httpResponse.statusCode)
+          }
+        }
+      }
+    })
+    session.resume()
+  }
+  
+  
+  //func postNewRepo(jsonToParse:
   
   
   func downloadUserImage(user: UserModel, completion: (UIImage) -> Void) {

@@ -19,6 +19,12 @@ class MainMenuViewController: UITableViewController {
   
   }
   
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    self.navigationController?.delegate = nil
+    
+  }
+  
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     

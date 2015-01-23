@@ -23,6 +23,8 @@
 		4E5607AF1A6F0C8C0043A4B3 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5607AE1A6F0C8C0043A4B3 /* WebViewController.swift */; };
 		4E5607B11A6F15E10043A4B3 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5607B01A6F15E10043A4B3 /* UsersViewController.swift */; };
 		4E602D8A1A7059B300CFEBAF /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E602D891A7059B300CFEBAF /* UserDetailViewController.swift */; };
+		4E9C23AD1A71A9C3009687B4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9C23AC1A71A9C3009687B4 /* Extensions.swift */; };
+		4E9C23AF1A71B5EB009687B4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9C23AE1A71B5EB009687B4 /* ProfileViewController.swift */; };
 		4EC5F5771A7063610037EDB8 /* ToUserDetailAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC5F5761A7063610037EDB8 /* ToUserDetailAnimationController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		4E5607AE1A6F0C8C0043A4B3 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		4E5607B01A6F15E10043A4B3 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		4E602D891A7059B300CFEBAF /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		4E9C23AC1A71A9C3009687B4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4E9C23AE1A71B5EB009687B4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4EC5F5761A7063610037EDB8 /* ToUserDetailAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToUserDetailAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				4E4D08C51A6DAFDE0070BE59 /* RepositoryModel.swift */,
+				4E9C23AC1A71A9C3009687B4 /* Extensions.swift */,
 				4E32415C1A6F1B920023CA75 /* UserModel.swift */,
 				4E32415A1A6F1AA70023CA75 /* UserCellModel.swift */,
 			);
@@ -157,11 +162,12 @@
 		4E4D08C01A6DA6B90070BE59 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4EC5F5751A7063480037EDB8 /* New Group */,
+				4EC5F5751A7063480037EDB8 /* AnimationControllers */,
 				4E4D08C31A6DADF00070BE59 /* NetworkController.swift */,
 				4E4D08A01A6DA4BF0070BE59 /* MainMenuViewController.swift */,
 				4E4D08C11A6DA9410070BE59 /* RepositoriesViewController.swift */,
 				4E5607B01A6F15E10043A4B3 /* UsersViewController.swift */,
+				4E9C23AE1A71B5EB009687B4 /* ProfileViewController.swift */,
 				4E5607AE1A6F0C8C0043A4B3 /* WebViewController.swift */,
 				4E602D891A7059B300CFEBAF /* UserDetailViewController.swift */,
 				4E4D089E1A6DA4BF0070BE59 /* AppDelegate.swift */,
@@ -169,12 +175,12 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		4EC5F5751A7063480037EDB8 /* New Group */ = {
+		4EC5F5751A7063480037EDB8 /* AnimationControllers */ = {
 			isa = PBXGroup;
 			children = (
 				4EC5F5761A7063610037EDB8 /* ToUserDetailAnimationController.swift */,
 			);
-			name = "New Group";
+			name = AnimationControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,8 +292,10 @@
 				4E4D08A11A6DA4BF0070BE59 /* MainMenuViewController.swift in Sources */,
 				4E4D08C21A6DA9410070BE59 /* RepositoriesViewController.swift in Sources */,
 				4E602D8A1A7059B300CFEBAF /* UserDetailViewController.swift in Sources */,
+				4E9C23AD1A71A9C3009687B4 /* Extensions.swift in Sources */,
 				4E32415D1A6F1B920023CA75 /* UserModel.swift in Sources */,
 				4E32415B1A6F1AA70023CA75 /* UserCellModel.swift in Sources */,
+				4E9C23AF1A71B5EB009687B4 /* ProfileViewController.swift in Sources */,
 				4E4D089F1A6DA4BF0070BE59 /* AppDelegate.swift in Sources */,
 				4EC5F5771A7063610037EDB8 /* ToUserDetailAnimationController.swift in Sources */,
 			);
